@@ -1,0 +1,182 @@
+
+:root{
+    --primary-dark: #101417;
+    
+    --primary-brand: #B91F33;
+    --primary-brand-light: #e62d45;
+    --primary-brand-dark: #8a0e1e;
+
+    --gray-light: #E1E1E1;
+    --gray-medium: #666666;
+    --contrast: #E0E34C;    
+}
+
+body{
+    font-family: 'Teko', sans-serif;
+    margin: 0;
+    text-transform: uppercase;    
+    background-color: var(--primary-dark);
+}
+
+a{
+    text-decoration: none; /*retirando o sublinhado dos links*/
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+h2{
+    color: white;
+    font-size: 40px;
+}
+
+p{
+    color: var(--gray-light);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+img{
+    display: block;
+}
+
+
+/*********Utilitários***********/
+
+.btn{    
+    color: white;
+    background-color: var(--primary-brand);
+    padding: 13px 60px 9px 60px; /*top right bottom left*/
+    font-size: 18px;
+    border-radius: 3px;
+    display: inline-block; 
+    transition: 0.5s;
+    
+}
+
+.btn:hover{
+   background-color: var(--primary-brand-light);
+   transform: scale(1.1);
+}
+
+.bg-light{    
+    background-color: var(--gray-light);
+}
+
+.bg-light h2{
+    color: var(--primary-dark);
+}
+
+.bg-light p{
+    color: var(--gray-medium);
+}
+
+
+/*********Utilitários***********/
+
+
+.container{
+    width: 1140px;
+    height: auto;
+    margin: 0 auto;
+    /*background-color: red;*/
+}
+
+
+.header{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    position: fixed;
+    top:0;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between; /*alinhamento no eixo X*/
+    align-items: center; /*alinhamento no eixo Y*/    
+}
+
+/* Formatando os links que estão DENTRO do menu */
+.menu a{
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 111px;
+}
+
+.menu a span{
+    visibility: hidden;
+}
+
+.menu a:hover{
+    color: var(--primary-brand);
+}
+
+/*quando o item do menu está ativo*/
+.menu a:focus{
+    color: var(--contrast);
+}
+
+.menu a:focus span{
+    visibility: visible;
+}
+
+.hero-section{
+    width: 100%;
+    height: 650px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1{
+    color: var(--gray-light);
+    font-size: 96px;
+    line-height: 90%;    
+}
+
+.hero-section p{
+    max-width: 790px;
+    color: var(--gray-light);
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.hero-section .container{
+    /*posição em relação a ele mesmo*/
+    position: relative;
+    top: 52px;    
+}
+
+.academia{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    column-gap: 24px; /*espaço entre colunas*/
+}
+
+
+
+.faca-parte{
+    padding: 40px 0;
+    position: relative;  /*servir de referência para o position:absolute da imagem*/  
+}
+
+.faca-parte .content{
+    max-width: 850px;
+}
+
+.faca-parte .image{
+    /*Posição em relação ao elemento PAI (desde que o pai também tenha position)
+    caso contráio a referência será o BODY*/
+    position: absolute; 
+    bottom: 0;    
+    right: 0;
+}
