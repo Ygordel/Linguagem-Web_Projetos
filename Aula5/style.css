@@ -1,0 +1,159 @@
+/*Variáveis*/
+:root{
+    --brand: #B91F33;
+    --brand-light: #d63c51;
+    --brand-dark: #68101b;    
+    --gray-100: #E1E1E1;
+    --gray-600: #666666;
+    --primary: #101417;
+}
+
+*{
+    /*Reset*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--primary);    
+    font-family: "Teko", sans-serif;    
+    text-transform: uppercase; /*faz o texto ficar maiúsculo*/
+}
+
+img{
+    display: block;
+}
+
+h1{
+    color: var(--gray-100);
+    font-size: 96px;
+    line-height: 90%;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 100%;
+}
+
+a{
+    /*retirando o sublinhado de TODOS os links do projeto*/
+    text-decoration: none;
+}
+
+p{
+    line-height: 120%;
+    color: var(--gray-100);
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.container{    
+    width: 1140px;
+    height: auto;
+    margin: 0 auto;   
+}
+
+.header{
+    background-color: #000000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /*padding-top: 16px;
+    padding-bottom: 16px;*/
+    /*padding: 16px 0; /*vertical(top/bottom) horizontal(left/right)*/
+    border-top: 5px var(--brand) solid;
+    position: sticky; /*Fica fixo após a rolagem*/
+    top: 0;
+}
+
+/*Selecionando o .container que está DENTRO do header*/
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight:700;
+    margin-left: 111px;
+}
+
+.menu a:hover{
+    color: var(--brand);
+    text-decoration: underline;
+}
+
+.banner{
+    /*background-color: red;*/
+    /*background-repeat: no-repeat;*/
+    background-image: url(../img/background.webp);
+    background-size: cover;
+    background-position: top center;
+    height: calc(100vh - 105px); /*view height*/
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.banner p{
+    font-size: 24px;
+}
+
+.banner a{
+    background-color: var(--brand);
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    padding: 12px 60px 8px 60px; /*top right bottom left*/
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.banner a:hover{
+    transform: scale(0.95);
+}
+
+.academia .container{
+    display: flex;
+    align-items: center;
+    column-gap: 24px; /*espaçamento entre os filhos*/
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.faca-parte{
+    background-color: var(--gray-100);
+}
+
+.faca-parte .container{
+    padding-top: 37px;
+    padding-bottom: 37px;
+    position: relative; /*faz com que o position:absolute se refira ao container*/
+}
+
+.faca-parte h2{
+    color: var(--primary);
+}
+
+.faca-parte p{
+    color: var(--gray-600);
+    margin-bottom: 0;
+}
+
+.conteudo-faca-parte{
+    width: 850px; /*...*/
+}
+
+.imagem-faca-parte{
+    /*Posição em relação ao elemento pai (DESDE QUE ELE TENHA POSITION), 
+    caso contrário será o body*/
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
