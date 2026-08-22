@@ -1,0 +1,74 @@
+/*Variáveis*/
+:root{
+    --brand: #B91F33;
+    --brand-light: #d63c51;
+    --brand-dark: #68101b;    
+    --gray-100: #E1E1E1;
+    --gray-600: #666666;
+    --primary: #101417;
+}
+
+*{
+    /*Reset*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--primary);    
+    font-family: "Teko", sans-serif;    
+    text-transform: uppercase; /*faz o texto ficar maiúsculo*/
+}
+
+a{
+    /*retirando o sublinhado de TODOS os links do projeto*/
+    text-decoration: none;
+}
+
+.container{    
+    width: 1140px;
+    height: auto;
+    margin: 0 auto;   
+}
+
+.header{
+    background-color: #000000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /*padding-top: 16px;
+    padding-bottom: 16px;*/
+    /*padding: 16px 0; /*vertical(top/bottom) horizontal(left/right)*/
+    border-top: 5px var(--brand) solid;
+}
+
+/*Selecionando o .container que está DENTRO do header*/
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.menu a{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight:700;
+    margin-left: 111px;
+}
+
+.menu a:hover{
+    color: var(--brand);
+    text-decoration: underline;
+}
+
+.banner{
+    /*background-color: red;*/
+    /*background-repeat: no-repeat;*/
+    background-image: url(../img/background.webp);
+    background-size: cover;
+    background-position: top center;
+    height: calc(100vh - 105px); /*view height*/
+}
