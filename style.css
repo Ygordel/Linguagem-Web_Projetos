@@ -11,6 +11,12 @@ body{
 
 img{
     margin-bottom: 30px;
+    border: 5px solid #222831;
+    border-radius: 50%;    
+
+    /*border-style: solid;
+    border-width: 5px;
+    border-color: #222831;*/
 }
 
 h1{
@@ -32,8 +38,10 @@ p{
 
 .principal{
     background-color: #EEEEEE;
-    width: 340px; /*largura*/
-    height: 501px; /*altura*/
+    
+    width: 70%; /*largura*/
+    max-width: 340px; /*largura máxima*/
+    min-height: 501px; /*altura*/
 
     margin-top: 30px;
     /*HACK para centralizar a div*/
@@ -64,4 +72,12 @@ p{
 /*Estado ao passar o mouse*/
 .menu a:hover{
     background-color: #000000;
+}
+
+.assinatura{
+    color: #222831;
+}
+
+.assinatura:hover{
+    font-style: italic;
 }
