@@ -1,0 +1,464 @@
+/*Variáveis*/
+:root{
+    --brand: #B91F33;
+    --brand-light: #d63c51;
+    --brand-dark: #68101b;    
+    --gray-100: #E1E1E1;
+    --gray-600: #666666;
+    --primary: #101417;
+    --swiper-theme-color: var(--brand);
+}
+
+/* .swiper-button-next{
+    color: yellow;
+} */
+
+*{
+    /*Reset*/
+    margin: 0;
+    padding: 0;
+}
+
+#academia{
+    scroll-margin-top: 80px;
+}
+
+#planos{
+    scroll-margin-top: 50px;
+}
+
+#contato{
+    scroll-margin-top: 150px;
+}
+
+html{
+    scroll-behavior: smooth; /*transforma a navegação em âncora, suave*/
+}
+
+body{
+    background-color: var(--primary);    
+    font-family: "Teko", sans-serif;    
+    text-transform: uppercase; /*faz o texto ficar maiúsculo*/
+}
+
+img{
+    display: block;
+}
+
+h1{
+    color: var(--gray-100);
+    font-size: 96px;
+    line-height: 90%;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 100%;
+}
+
+a{
+    /*retirando o sublinhado de TODOS os links do projeto*/
+    text-decoration: none;
+}
+
+p{
+    line-height: 120%;
+    color: var(--gray-100);
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.fundo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);   
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    border: solid 5px var(--brand);
+    position: relative; 
+}
+
+.popup span{
+    font-size: 32px;
+    color: #ffffff;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.popup span:hover{
+    transform: rotate(180deg);
+}
+
+.popup img{
+    max-width: 100%;
+}
+
+.esconder-popup{
+    display: none;
+}
+
+.container{    
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    /*faz com que o padding/borda não interfiram nas dimensões*/
+    box-sizing: border-box;
+
+    max-width: 1140px; /*largura máxima*/
+    height: auto;
+    margin: 0 auto;   
+}
+
+.header{
+    background-color: #000000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /*padding-top: 16px;
+    padding-bottom: 16px;*/
+    /*padding: 16px 0; /*vertical(top/bottom) horizontal(left/right)*/
+    border-top: 5px var(--brand) solid;
+    position: sticky; /*Fica fixo após a rolagem*/
+    top: 0;
+    z-index: 1000; /*sobreposição*/
+}
+
+/*Selecionando o .container que está DENTRO do header*/
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight:700;
+    margin-left: 111px;
+}
+
+.menu a:hover{
+    color: var(--brand);
+    text-decoration: underline;
+}
+
+.bg-1{
+    background-image: url(../img/background.webp);
+}
+
+.bg-2{
+    background-image: url(../img/background-2.webp);
+}
+
+.bg-3{
+    background-image: url(../img/background-3.webp);
+}
+
+.banner{
+    /*background-color: red;*/
+    /*background-repeat: no-repeat;*/
+    
+    background-size: cover;
+    background-position: top center;
+    height: calc(100vh - 105px); /*view height*/
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.banner p{
+    font-size: 24px;
+}
+
+.banner a{
+    background-color: var(--brand);
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    padding: 12px 60px 8px 60px; /*top right bottom left*/
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.banner a:hover{
+    transform: scale(0.95);
+}
+
+.academia .container{
+    display: flex;
+    align-items: center;
+    column-gap: 24px; /*espaçamento entre os filhos*/
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.faca-parte{
+    background-color: var(--gray-100);
+}
+
+.faca-parte .container{
+    padding-top: 37px;
+    padding-bottom: 37px;
+    position: relative; /*faz com que o position:absolute se refira ao container*/
+}
+
+.faca-parte h2{
+    color: var(--primary);
+}
+
+.faca-parte p{
+    color: var(--gray-600);
+    margin-bottom: 0;
+}
+
+.conteudo-faca-parte{
+    width: calc(100% - 200px); /*largura total - o tamanho da imagem*/
+    max-width: 850px; 
+}
+
+.imagem-faca-parte{
+    /*Posição em relação ao elemento pai (DESDE QUE ELE TENHA POSITION), 
+    caso contrário será o body*/
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.planos .container{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.flex-cards{
+    display: flex;
+    column-gap: 24px;
+}
+
+.card-mensal{
+    background-image: url(../img/bg_plano1.webp);
+}
+
+.card-anual{
+    background-image: url(../img/bg_plano2.webp);
+    border-color: #E0E34C !important; /*em um conflito, será prioridade*/
+}
+
+.card-anual .preco, .card-anual h3{
+    color: #E0E34C !important;
+}
+
+.card-anual .btn{
+    border-color: #E0E34C;
+}
+
+.card-semestral{
+    background-image: url(../img/bg_plano3.webp);
+}
+
+.card{
+    border: solid 1px var(--brand);
+    padding: 30px;
+}
+
+.card h3, .preco{
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 100%;
+}
+
+.card ul{
+    text-align: left;
+    list-style-position: inside; /*trazer o marcador pra dentro da lista*/
+    /*list-style-image: url(../img/check.png);*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--gray-100);
+}
+
+.btn{
+    color: #ffffff;
+    border: solid 2px var(--brand);
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(0.95);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.conteudo-fale-conosco{
+    max-width: 655px;
+}
+
+.mapa iframe{
+    width: 100%;
+}
+
+.conteudo-footer{
+    background-color: var(--brand);
+    padding: 15px 220px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.conteudo-footer p{
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    margin-bottom: 50px;
+}
+
+.social a:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+
+/*
+    MEDIA QUERIES
+    Condicionais para mudanças no site a partir de tamanhos de tela    
+*/
+
+@media (max-width: 1200px){
+
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 32px;
+    }   
+    .menu{
+        /*display: none;*/
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+        background-color: var(--primary);
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;     
+        height: 100vh;
+    }   
+    .show{
+        /*display: block;*/
+        transform: translateX(0);
+    }
+
+    .menu a{
+        display: block;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid var(--gray-100);
+        padding: 30px 0;
+    }
+
+    .barra{
+        width: 40px;
+        height: 3px;
+        background-color: #ffffff;
+        margin-bottom: 3px;
+        transition: 0.5s;
+    }
+  
+    /*Quando a barra for a primeira filha de um elemento*/
+    .x .barra:first-child{
+        transform: rotate(45deg) translate(5px,5px) ;        
+    }
+
+    /*Quando a barra for a filha de número 2*/
+    .x .barra:nth-child(2){
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    /*Quando a barra for a última filha de um elemento*/
+    .x .barra:last-child{
+        transform: rotate(-45deg)  translate(4px,-3px);
+    }
+
+    .banner{
+        height: 420px;
+    }
+
+    .banner p{
+        font-size: 18px;
+    } 
+    
+    .imagem-academia img{
+        width: 450px;
+    }
+
+    .flex-cards{
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+
+    .card{
+        max-width: 360px;
+        background-size: cover;
+    }
+    
+}
+
+@media (max-width: 900px){    
+    .academia .container{        
+        flex-direction: column;
+        row-gap: 40px;
+    }
+  
+    .imagem-academia img{
+        width: 100%;
+        max-width: 558px;
+        height: auto;
+    }
+
+    .conteudo-academia{
+        max-width: 558px;
+    }
+
+    .conteudo-footer{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .imagem-faca-parte{
+        display: none;
+    }
+
+    .conteudo-faca-parte{
+        width: 100%;
+    }
+
+}
