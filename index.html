@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Restrita</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg-success">
+    
+    <div class="container d-flex align-items-center min-vh-100">
+
+        <div class="row align-items-center bg-white">
+            <div class="col-lg-6 p-0">
+
+                <!-- <img src="img/mulher-1x1.webp" alt="" class="img-fluid d-none d-lg-block">
+                <img src="img/mulher-16x9.webp" alt="" class="img-fluid d-lg-none"> -->
+
+                <picture>                    
+                    <source srcset="img/mulher-1x1.webp" media="(min-width: 992px)">
+                    <!-- <source srcset="img/mulher-negra.jpg" media="(min-width: 576px)"> -->
+                    <img src="img/mulher-16x9.webp" alt="" class="img-fluid">
+                </picture>
+
+            </div>
+
+            <div class="col-lg-6 py-5 py-lg-0">
+                <img src="img/logo.svg" alt="" class="mb-3">
+                <h1>Que bom ter você de volta!</h1>
+                <p>Entre com suas informações para acessar o sistema!</p>
+
+                <form action="#" autocomplete="off">
+
+                    <label for="login">Digite seu login</label>
+                    <input type="text" id="login" class="form-control mb-2">
+
+                    <label for="senha">Digite sua senha</label>
+                    <input type="password" id="senha" class="form-control mb-2">
+                    
+                    <button type="submit" class="btn btn-success w-100">Entrar no sistema</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
