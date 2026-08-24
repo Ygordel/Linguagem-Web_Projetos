@@ -1,0 +1,10 @@
+.btn-pink{
+    background-color: pink;
+}
+
+.btn-pink:hover{
+    background-color: purple;
+    color: pink;
+}
+
+
