@@ -1,0 +1,17 @@
+::-ms-reveal {
+    display: none;
+}
+
+.input{
+    position: relative;
+}
+
+.olho{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    cursor: pointer;
+
+    display: none;
+}
+
