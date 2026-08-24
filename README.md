@@ -1,79 +1,103 @@
-# 🌐 Linguagem Web — Projetos
+# 📚 Aula 14 --- Login, Mostrar/Ocultar Senha, LGPD e Modal
 
-Repositório destinado aos estudos, exercícios e projetos práticos de
-**Desenvolvimento Web**.
+**Professor:** Ygor Silva\
+**Curso:** Linguagem Web
 
 ## 🎯 Objetivo
 
-Reunir atividades desenvolvidas durante o aprendizado de tecnologias
-voltadas à criação e estilização de páginas e interfaces para a Web.
+Evoluir a interface de login adicionando recursos de **interatividade,
+usabilidade e componentes Bootstrap**.
 
-## 🛠️ Tecnologias
+## 🚀 Recursos desenvolvidos
 
-- HTML5
-- CSS3
-- JavaScript
-- Design e organização de interfaces Web
+-   Mostrar/ocultar senha;
+-   Ícone de senha;
+-   Controle de visibilidade do ícone;
+-   Aviso de LGPD persistente;
+-   `localStorage`;
+-   Modal de cadastro;
+-   Imagem responsiva com `<picture>`;
+-   Manipulação do DOM;
+-   Eventos `click` e `keyup`.
 
-## 📚 Conteúdo
+## 👁️ Mostrar e ocultar senha
 
-O repositório reúne atividades práticas, exercícios e projetos desenvolvidos
-ao longo da formação, permitindo acompanhar a evolução dos conhecimentos
-em Desenvolvimento Web.
+``` javascript
+const olho = document.querySelector('.olho');
+const inputSenha = document.querySelector('#senha');
 
-## 🚀 Projeto
+let tipo = inputSenha.getAttribute('type');
 
-Entre os trabalhos desenvolvidos está um projeto prático de **Academia**,
-utilizado para aplicar os conhecimentos de estruturação de páginas,
-estilização e composição visual.
+if (tipo == 'password') {
+  inputSenha.setAttribute('type', 'text');
+} else {
+  inputSenha.setAttribute('type', 'password');
+}
+```
 
-## 👨‍💻 Autor
+## ⌨️ Evento `keyup`
 
-**Ygor Delfino da Silva**
+O ícone é exibido somente quando a senha possui mais de dois caracteres:
 
-📌 Projeto desenvolvido para fins de estudo, prática e portfólio.
+``` javascript
+inputSenha.addEventListener('keyup', function () {
+  if (inputSenha.value.length > 2) {
+    olho.style.display = 'block';
+  } else {
+    olho.style.display = 'none';
+  }
+});
+```
 
----
+## 🛡️ LGPD com `localStorage`
 
-⭐ Repositório dedicado ao aprendizado contínuo de **Desenvolvimento Web**.
-## 🌐 Linguagem Web — Projetos
+Ao clicar em **Estou Ciente**, a preferência é armazenada no navegador:
 
-Repositório dedicado ao estudo e desenvolvimento de projetos de **Linguagem Web**, reunindo aulas, exercícios, práticas e aplicações desenvolvidas durante o processo de aprendizagem.
+``` javascript
+localStorage.setItem('fechouLGPD', 'sim');
+```
 
-O conteúdo aborda principalmente **HTML5, CSS3 e JavaScript**, passando pela estruturação de páginas, estilização, layouts responsivos, interatividade, bibliotecas e desenvolvimento de interfaces Web.
+## 🎨 Posicionamento do ícone
 
-A proposta é transformar o conhecimento teórico em **prática**, documentando a evolução dos projetos e formando um material de consulta e portfólio.
+``` css
+.input {
+  position: relative;
+}
 
-### 🛠️ Tecnologias
+.olho {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  cursor: pointer;
+}
+```
 
-- 🌐 HTML5
-- 🎨 CSS3
-- ⚡ JavaScript
-- 📱 Design Responsivo
-- 🧩 Bibliotecas Front-End
+## 🪟 Modal de cadastro
 
-### 🧰 Ferramentas
+O Bootstrap permite abrir o modal utilizando:
 
-- 💻 [Visual Studio Code](https://code.visualstudio.com/)
-- 🐙 [GitHub](https://github.com/)
-- 🖥️ [GitHub Desktop](https://desktop.github.com/)
+``` html
+data-bs-toggle="modal"
+data-bs-target="#exampleModal"
+```
 
-### 📚 Aprendizado Contínuo
+## 🖼️ Imagem responsiva
 
-- 🌐 [W3Schools](https://www.w3schools.com/)
-- 📖 [MDN — HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- 🎨 [MDN — CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- ⚡ [MDN — JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- 🚀 [web.dev](https://web.dev/)
+O elemento `<picture>` permite trabalhar com diferentes imagens conforme
+o breakpoint.
 
-### 🚀 Projetos
+## 📁 Estrutura dos arquivos
 
-Entre as atividades está o desenvolvimento de uma **interface Web para uma Academia**, utilizada para aplicar os conhecimentos adquiridos durante as aulas.
+-   `index.html` --- login, modal, imagem e aviso LGPD;
+-   `style.css` --- estilos e posicionamento;
+-   `login.js` --- mostrar/ocultar senha;
+-   `lgpd.js` --- persistência do aviso LGPD;
+-   Bootstrap --- componentes e Grid.
 
-O projeto envolve **HTML, CSS, JavaScript, responsividade, componentes visuais, efeitos de interação e integração com bibliotecas externas**.
+## ✅ Conclusão
 
----
+A aula integrou JavaScript, DOM, eventos, atributos HTML,
+`localStorage`, Bootstrap e recursos de UX em uma interface de login
+mais completa.
 
-👨‍🏫 **Professor: Ygor Silva**
-
-⭐ *Estudar → Praticar → Documentar → Evoluir*
+> Documentação elaborada para fins de estudo e portfólio.
