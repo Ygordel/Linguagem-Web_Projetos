@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Restrita</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-success">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Cliente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="row row-gap-2">
+                            <!-- Nome, E-mail, CPF -->
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Nome completo" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Seu e-mail" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Seu CPF" class="form-control">
+                            </div>       
+                            
+                            
+                            <!-- Data de Nascimento, Whatsapp, Login, Senha -->
+                            <div class="col-lg-3">
+                                <input type="text" placeholder="Data de Nascimento" class="form-control">
+                            </div>
+
+                            <div class="col-lg-3">
+                                <input type="text" placeholder="Seu Whatsapp" class="form-control">
+                            </div>
+
+                            <div class="col-lg-3">
+                                <input type="text" placeholder="Seu login" class="form-control">
+                            </div>
+
+                            <div class="col-lg-3">
+                                <input type="password" placeholder="Sua senha" class="form-control">
+                            </div>
+
+                            <!-- Cep, Logradouro, Número, Complemento -->
+                            <div class="col-lg-3">
+                                <input type="text" placeholder="Digite o cep" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Logradouro" class="form-control">
+                            </div>
+
+                            <div class="col-lg-2">
+                                <input type="text" placeholder="Número" class="form-control">
+                            </div>
+
+                            <div class="col-lg-3">
+                                <input type="text" placeholder="Complemento" class="form-control">
+                            </div>
+
+                            <!-- Bairro, Cidade, Estado -->
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Bairro" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Cidade" class="form-control">
+                            </div>
+
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Estado" class="form-control">
+                            </div>
+
+                            <div class="col-12">
+                                <input type="checkbox" id="termos" class="form-check-input" required>
+                                <label for="termos">Eu concordo com os termos de política de privacidade</label>
+                            </div>
+                            
+                        </div>
+
+                        <button class="btn btn-success mt-3">Efetuar cadastro</button>
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <p>Seus dados estarão seguros</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex align-items-center min-vh-100">
+
+        <div class="row align-items-center bg-white">
+            <div class="col-lg-6 p-0">
+                <!-- <img src="img/mulher-1x1.webp" alt="" class="img-fluid d-none d-lg-block">
+                <img src="img/mulher-16x9.webp" alt="" class="img-fluid d-lg-none"> -->
+
+                <picture>
+                    <source srcset="img/mulher-1x1.webp" media="(min-width: 992px)">
+                    <!-- <source srcset="img/mulher-negra.jpg" media="(min-width: 576px)"> -->
+                    <img src="img/mulher-16x9.webp" alt="" class="img-fluid">
+                </picture>
+
+            </div>
+
+            <div class="col-lg-6 py-5 py-lg-0">
+                <img src="img/logo.svg" alt="" class="mb-3">
+                <h1>Que bom ter você de volta!</h1>
+                <p>Entre com suas informações para acessar o sistema!</p>
+
+                <form action="#" autocomplete="off">
+
+                    <div class="input">
+                        <label for="login">Digite seu login</label>
+                        <input type="text" id="login" class="form-control mb-2">
+                    </div>
+
+                    <div class="input">
+                        <label for="senha">Digite sua senha</label>
+                        <input type="password" id="senha" class="form-control mb-2">
+                        <img src="img/closed.svg" alt="" height="25" class="olho">
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Entrar no sistema</button>
+                </form>
+
+                <div class="mt-3 text-end">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Não tem conta? Cadastre-se
+                        aqui</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark py-3 fixed-bottom" id="conteudo-lgpd">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat error voluptatum rem accusamus ipsa
+                magnam at earum repellat dolore odio minus cupiditate quis excepturi enim amet quia fugiat sapiente,
+                dicta voluptas velit? Aperiam beatae ducimus similique a vero at quod?
+            </div>
+
+            <div class="col-lg-2">
+                <button class="btn btn-warning" id="btn-lgpd">Estou Ciente</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/lgpd.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
